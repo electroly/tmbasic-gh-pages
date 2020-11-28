@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TMBASIC</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="TMBASIC">
+<meta name="application-name" content="TMBASIC">
+<meta name="msapplication-TileColor" content="#da532c">
+<style>
+* { -webkit-text-size-adjust: none; text-size-adjust: none; }
+a, a > span.tt { color: #326ec8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+body { font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif; font-size: 16px; color: #444444; margin: 1cm auto; margin-bottom: 5cm; padding-top: 1cm; max-width: 900px; line-height: 165%; overflow-y: scroll; }
+col { width: auto !important; }
+div.backlinks { font-size: 10pt; position: absolute; margin-top: -1cm; line-height: 100%; white-space: nowrap; }
+div.bar { font-size: 9pt; margin-top: 20px; }
+div.bar > span { background: #f8f8f8; padding: 5px 10px 5px 10px; font-weight: 500; }
+div.code div { text-indent: -2cm; padding-left: 2cm; }
+div.code { padding: 3mm; margin-bottom: 5mm; background: #f8f8f8; margin-top: 8px; white-space: pre; }
+div.paragraphBreak { height: 16px; }
+div#root { margin-left: 1cm; margin-right: 1cm; }
+h1 { font-size: 40px; color: #333333; }
+h1 > span.tt { letter-spacing: -2px; word-break: break-word; }
+h1#tmbasic { display: none; }
+h1, h2, h3, h4, h5 { font-weight: 400; letter-spacing: -0.38px; line-height: 100%; }
+h2 { font-size: 28px; color: #ba3925; margin-top: 50px; }
+h3 { color: #ba3925; font-size: 20px; }
+img.screenshot { margin-top: 2mm; height: 275px; width: 434px; float: right; margin-left: 1cm; margin-right: 1mm; background: #bbbbbb; }
+nav { background: #353535; position: absolute; top: 0; left: 0; width: 100%; padding-top: 2mm; padding-bottom: 2mm; }
+nav > div { max-width: 900px; margin: 0 auto; }
+nav > div > div { margin-left: 1cm; margin-right: 1cm; }
+nav > div > div > a { margin-left: 3mm; padding: 1mm; vertical-align: middle; color: #afafaf; vertical-align: middle;}
+nav > div > div > a:hover { color: #FFFFFF; border-radius: 0.5mm; text-decoration: none; }
+nav > div > div > a:first-child { margin-left: 0; padding-left: 0; font-size: 24px; vertical-align: top; color: #f7f7f7; }
+pre, code, div.code, span.tt { font-family: Consolas, monospace; letter-spacing: -0.5px; color: #19177c; }
+pre, div.code { line-height: 100%; overflow-x: auto; overflow-y: hidden; margin-top: 0; }
+pre.diagram { font-size: 12px; display: inline-block; color: #333333; line-height: 100%; overflow-x: auto; overflow-y: hidden; width: 100%; }
+span.comment, span.comment span.string { color: #26a135; white-space: normal; }
+span.indent { white-space: pre; }
+span.operator { color: #666666; }
+span.string { color: #ba2121; }
+span.tt { line-height: 0; }
+strong, th { font-weight: 600; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid #d5d5d5; padding: 1mm; padding-left: 3mm; padding-right: 4mm; vertical-align: top; }
+th { text-align: left; }
+ul { padding-left: 5mm; }
+@media only screen and (max-width: 900px) and (min-width: 750px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+  img.screenshot { height: 233.75px; width: 368.9px; /* 85% */ }
+}
+@media only screen and (max-width: 750px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+  div#root { margin-left: 5mm; margin-right: 5mm; }
+  nav > div > div { margin-left: 5mm; margin-right: 5mm; }
+  div.backlinks { left: 5mm; }
+  h1, h2 { margin-left: 0; }
+  img.screenshot { float: none; margin-left: 0; margin-top: 0; height: 206.25px; width: 325.5px; /* 75% */ }
+}
+@media only screen and (max-width: 350px) {
+  img.screenshot { height: 103.125px; width: 162.75px; /* 37.5% */ }
+  nav { zoom: 0.80; }
+}
+</style>
+</head>
+<body>
+<nav>
+<div><div><a href="/" style="font-weight: 600;">TMBASIC</a><a href="doc.html">Documentation</a><a href="https://github.com/electroly/tmbasic">GitHub</a></div></div>
+</nav>
+<div id="root">
+<h1 id="tmbasic">TMBASIC</h1>
+<!-- See DEVELOPERS.md for instructions on generating this screenshot. -->
+<p><a href="https://tmbasic.com/screenshot.png"><img src="https://tmbasic.com/screenshot.png" alt="Screenshot" class="screenshot" width="500"></a></p>
+<p><strong>TMBASIC</strong> is a <a href="https://en.wikipedia.org/wiki/Programming_language">programming language</a> for writing <a href="https://en.wikipedia.org/wiki/Console_application">console programs</a>, from simple command line tools to sophisticated mouse-driven user interfaces. The BASIC language is beginner-friendly, and experienced programmers will find it familiar and easy to use.</p>
+<p><strong>TMBASIC is under development. Stay tuned!</strong></p>
+<p><a href="https://tmbasic.com/doc.html">Read the documentation online</a> or in TMBASIC’s integrated help viewer. Try the <a href="https://tmbasic.com/cheat.html">Cheat Sheet for Experienced Programmers</a> to get started quickly.</p>
+<h2 id="what-can-i-make-with-tmbasic">What can I make with TMBASIC?</h2>
+<strong>Command line interfaces (CLI)</strong>
+<blockquote>
+The simplest type of program. Read input from the keyboard or from <a href="https://en.wikipedia.org/wiki/Command-line_interface#Arguments">shell arguments</a>. Print lines of text as output. Examples include developer tools like <a href="https://en.wikipedia.org/wiki/Git">git</a> and <a href="https://en.wikipedia.org/wiki/Interactive_fiction">interactive fiction</a> games like <a href="https://en.wikipedia.org/wiki/Zork">Zork</a>.
+</blockquote>
+<strong>Text-based user interfaces (TUI)</strong>
+<blockquote>
+Rich mouse-driven programs featuring windows, buttons, pull-down menus, and other modern user interface concepts. <a href="https://en.wikipedia.org/wiki/Midnight_Commander">Midnight Commander</a> and TMBASIC itself are TUI programs.
+</blockquote>
+<strong>Text-mode games</strong>
+<blockquote>
+Start with a blank screen and draw your own program elements from scratch. Use box-drawing characters and other Unicode symbols to create primitive graphics. <a href="https://en.wikipedia.org/wiki/NetHack">NetHack</a> and <a href="https://en.wikipedia.org/wiki/ZZT">ZZT</a> are examples of text-mode games.
+</blockquote>
+<h2 id="its-easy">It’s easy!</h2>
+<strong>Easy to get started</strong>
+<blockquote>
+The BASIC language will feel familiar to anyone with programming experience. New programmers will find it easy to learn. Everything you need to develop and distribute sophisticated apps is included in TMBASIC.
+</blockquote>
+<strong>Easy to write</strong>
+<blockquote>
+Developing a high-quality modern GUI requires professional-level expertise. Text-based apps have few options for visual effects, and even a novice can produce quality results.
+</blockquote>
+<strong>Easy to share</strong>
+<blockquote>
+TMBASIC apps are standalone executables that require no external library files. They can be copied and opened without installation. TMBASIC can <a href="https://en.wikipedia.org/wiki/Cross_compiler">cross-compile</a> native executables targeting Windows, macOS, and Linux.
+</blockquote>
+<h2 id="compatibility">Compatibility</h2>
+<table>
+<tr>
+<td>
+<strong>Windows</strong> 7+
+</td>
+<td>
+64-bit • 32-bit
+</td>
+</tr>
+<tr>
+<td>
+<strong>macOS</strong> 10.13+
+</td>
+<td>
+Intel • Apple Silicon
+</td>
+</tr>
+<tr>
+<td>
+<strong>Linux</strong>
+</td>
+<td>
+64-bit • 32-bit • ARM64 • ARM32
+</td>
+</tr>
+<tr>
+<td>
+<strong>iOS</strong>
+</td>
+<td>
+<a href="https://apps.apple.com/us/app/ish-shell/id1436902243">iSH Shell</a> (Linux 32-bit)
+</td>
+</tr>
+<tr>
+<td>
+<strong>Android</strong>
+</td>
+<td>
+<a href="https://termux.com/">Termux</a> (Linux ARM64)
+</td>
+</tr>
+</table>
+<h2 id="license">License</h2>
+<p>TMBASIC is <a href="https://en.wikipedia.org/wiki/Open-source_software">open source software</a> available free of charge. Your compiled programs and TMBASIC itself are built using <a href="https://github.com/electroly/tmbasic/blob/master/doc/third-party-libraries.md">many third party libraries</a>. You must obey the licenses of these open source components when you share your programs. The licenses are permissive and commercial-friendly. When you compile your program, TMBASIC produces a <code>LICENSE.txt</code> file for your convenience. Include this license file when sharing your TMBASIC app.</p>
+
+</div>
+</body>
+</html>
